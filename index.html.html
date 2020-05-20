@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" charset = "utf-8" content="width=device-width, initial-scale=1.0">
+</head>
+
+<script>
+function myFunction() {
+    document.body.className="B";
+}
+function delay (URL) {
+    setTimeout( function() { window.location = URL }, 2000 );
+}
+</script>
+
+<style>
+
+body{
+
+	font-family: "Arial", sans-serif;
+	color: #818181
+	background: white;
+	opacity:0;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari */
+}
+	
+body.B{
+	background: black;
+	transition: background 2s;
+}
+
+.more {               
+   width: 100%;
+   text-align: center;        
+   margin: 0;
+   padding: 0;
+   line-height: 120px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 10px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:link {
+  color: #818181;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: #818181;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #f1f1f1;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+</style>
+
+<body class=B onload="document.body.style.opacity='1'">
+<div class="more">
+	
+	<p style="color:#818181;text-align:center;">Daniel Vadasz is a photographer living in Houston, Texas</p>
+	
+	<a href="https://www.instagram.com/daniel_vadasz/?hl=en" style="text-align:center">Instagram</a>
+
+</div>
+
+<div class="sidenav">
+  <a href="#Without"onclick = "myFunction();delay ('without.html')";">Without</a>
+  <a href="#Color">Color</a>
+  <a href="#About"onclick = "document.body.style.opacity='0'; myFunction();delay ('about.html');";">About</a>
+</div>
+
+</body>
+</html>
