@@ -1,0 +1,58 @@
+html {
+  font-size: 12px; /* px means "pixels": the base font size is now 10 pixels high  */
+  font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
+  background-color: #FFFFFF;
+}
+
+/* p { */
+  /* width: 200px; */
+  /* margin: auto auto; */
+  /* background-color: #f8f9fa; */
+  /* padding: 1em; */
+  /* border: 1px solid; */
+  /* border-color: #a2a9b1; */
+/* } */
+
+a {
+	color: #0645ad;
+	text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #0b0080;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+	
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.toc {
+  width: auto;
+  margin: 0 0;
+  background-color: #f8f9fa;
+  padding: 1em;
+  border: 1px solid;
+  border-color: #a2a9b1;
+  line-height: 2;
+}
+
+.toc2 {
+	  text-indent: 3em;
+}
+
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
