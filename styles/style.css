@@ -37,8 +37,26 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 
+.collapsible {
+  background: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+
+  
+
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+}
+
 .toc {
-  width: auto;
+  width: 200px;
   margin: 0 0;
   background-color: #f8f9fa;
   padding: 1em;
