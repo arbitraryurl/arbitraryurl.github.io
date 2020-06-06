@@ -42,17 +42,28 @@ a:hover {
   cursor: pointer;
   border: none;
   outline: none;
-list-style-type: none; /* Remove bullets */
+  list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
+}
 
-  
+.collapsible:after {
+  content: '[+]'; /* Unicode character for "plus" sign (+) */
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
 
+.active:after {
+  content: "[-]"; /* Unicode character for "minus" sign (-) */
 }
 
 .content {
-  display: none;
+  padding: 0 18px;
   overflow: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 .toc {
