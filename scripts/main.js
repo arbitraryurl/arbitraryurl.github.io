@@ -26,7 +26,7 @@ if ( document.URL.includes("instant.html") ) {
 	});
 }
 
-if ( document.URL.includes("index.html") ) {
+else {
 	document.querySelector('#here').addEventListener('click', function() {
 		this.classList.toggle("activeIdx")
 		document.querySelector('#first').classList.toggle('open');
