@@ -33,6 +33,35 @@ img {
 	object-fit: contain;
 }
 	
+.btn {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	color: #0645ad;
+	text-decoration: none;
+	text-indent: 2em;
+	background: none;
+
+}
+
+.active{
+	border: none;
+	background-color: none;
+}
+
+.active:after{
+  content: "\2190"; /* Unicode character for "plus" sign (+) */
+  color: black;
+  float: right;
+  margin-left: 2px;
+}
+	
+
+.btn:hover{
+	border:none;
+	text-decoration: underline;
+	background-color: none;
+}
 
 
 
@@ -83,21 +112,60 @@ img {
 }
 
 .collapsible:after {
+  content: '[-]'; /* Unicode character for "plus" sign (+) */
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsibleidx {
+  font-size: 12px;
+  background: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.collapsibleidx:after {
   content: '[+]'; /* Unicode character for "plus" sign (+) */
   color: black;
   float: right;
   margin-left: 5px;
 }
 
-.active:after {
-  content: "[-]"; /* Unicode character for "minus" sign (-) */
+.activeIdx:after {
+	content: "[-]"; /* Unicode character for "minus" sign (-) */
+}
+
+.activeMain:after {
+  content: "[+]"; /* Unicode character for "minus" sign (-) */
 }
 
 .content {
-  overflow: hidden;
+  height:auto;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.content.open {
+	height:auto;
+	max-height: 72px;
+	overflow: hidden;
+}
+
+.contentOpen {
+  height:auto;
+  max-height: 72px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.contentOpen.collapsed {
+  max-height:0;
 }
 
 
@@ -107,9 +175,34 @@ img {
 	height: 850px;	
 }
 
+.middle {
+  margin: 0;
+  position: absolute;
+  /* top: 50%; */
+  /* -ms-transform: translateY(-50%); */
+  /* transform: translateY(-50%); */
+  margin-left: 10px;
+  margin-top: 10px
+}
+
 .mySlides {
   display: none;
 }
+
+/* The side navigation menu */
+.sidebar {
+    letter-spacing: 2px;
+	text-align: justify;
+	margin: 5;
+	padding: 0;
+	width: 100px;
+	background-color: white;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+
 
 .toc {
   width: 200px;

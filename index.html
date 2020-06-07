@@ -11,25 +11,34 @@
 		<ul>
 			<center><li><b>Contents</center></li></b>	
 			
-			<button type="button" class="collapsible">
+			<button type="button" class="collapsibleidx" id="here">
 				1 <a href="#" onClick="return false;">Instants</a>
 			</button>
 			
-			<div class = "content">
+			<div class = "content coll" id = "first">
 				<div class = "toc2">
-					<li>1.1 <a href="instant.html">Instant #1</a></li>
-					<li>1.2 <a href="instant.html">Instant #2</a></li>
-					<li>1.3 <a href="instant.html">Instant #3</a></li>
+					<li>1.1 <a href="instant.html" onclick="store(1)">Instant #1</a></li>
+					<li>1.2 <a href="instant.html" onclick="store(2)">Instant #2</a></li>
+					<li>1.3 <a href="instant.html" onclick="store(3)">Instant #3</a></li>
 				</div>
 			</div>
-			<li>2 <a href="http://www.google.com">About</a></li>
-			<li>3 <a href="http://www.google.com">CV</a></li>
-			<li>4 <a href="http://www.google.com">Contact</a></li>
-				
-				
 			
+			<button type="button" class="collapsibleidx" id="here2">
+				2 <a href="#" onClick="return false;">Loops</a>
+			</button>
+			
+			<div class = "content coll" id = "second">
+				<div class = "toc2">
+					<li>2.1 <a href="instant.html">Loop #1</a></li>
+					<li>2.2 <a href="instant.html">Loop #2</a></li>
+					<li>2.3 <a href="instant.html">Loop #3</a></li>
+				</div>
+			</div>
+			
+			<li>3 <a href="http://www.google.com">About</a></li>
+			<li>4 <a href="http://www.google.com">CV</a></li>
+			<li>5 <a href="http://www.google.com">Contact</a></li>			
 		</ul>
-
 	</div>
 </div>
 
