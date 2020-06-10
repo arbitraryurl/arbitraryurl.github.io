@@ -1,3 +1,26 @@
+@-ms-viewport{
+  width: device-width;
+}
+
+@media only screen and (max-device-width: 768px) {
+      .show-mobile {
+        display: block;
+      }
+      .hide-mobile {
+        display: none;
+      }
+    }
+
+ @media only screen and (min-device-width: 769px) {
+      .show-mobile {
+        display: none;
+      }
+      .hide-mobile {
+        display: block;
+      }
+    }
+
+
 html {
   font-size: 12px; /* px means "pixels": the base font size is now 10 pixels high  */
   font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
@@ -175,7 +198,7 @@ img {
 	width: auto;
 	margin-top: 0px;
 	padding: 0px;
-	right: 75px;	
+	left:700px;	
 	top: 50%;
 	margin: -425px 0 0 0;
 }
@@ -191,13 +214,13 @@ img {
 
 .content.open {
 	height:auto;
-	max-height: 72px;
+	max-height: 150px;
 	overflow: hidden;
 }
 
 .contentOpen {
   height:auto;
-  max-height: 72px;
+  max-height: 150px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
