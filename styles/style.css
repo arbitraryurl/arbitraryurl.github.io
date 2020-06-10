@@ -276,6 +276,16 @@ img {
   line-height: 2;
 }
 
+.toc_mobile {
+  width: 33%;
+  margin: 0 0;
+  background-color: #f8f9fa;
+  padding: 1em;
+  border: 1px solid;
+  border-color: #a2a9b1;
+  line-height: 2;
+}
+
 .toc2 {
 	  text-indent: 2em;
 }
