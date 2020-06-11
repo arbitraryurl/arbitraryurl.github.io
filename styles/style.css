@@ -11,8 +11,12 @@
       }
 	  #hide_this{
 		  /* display:none; */
-		  font-size:8px;
+		  font-size:7px;
 		  }
+	  #mob {
+		  top:9%;
+	  }
+	  
     }
 
  @media only screen and (min-device-width: 769px) {
@@ -54,6 +58,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+a:focus { 
+    outline: none; 
+}
+
 img {
 	max-width: 100%;
 
@@ -62,6 +70,12 @@ img {
 	display: block; /* remove extra space below image */
 	object-fit: contain;
 }
+
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
 	
 .btn {
 	cursor: pointer;
@@ -118,6 +132,7 @@ img {
 	overflow:hidden;
 	width:50%;
 	height:100%;
+	max-height: 850px;
 }
 
 .prev {
@@ -224,13 +239,24 @@ img {
 	list-style-type: none; /* Remove bullets */
 	margin-left:1%;
 	margin-top: none;
-	min-width: 110px;
+	/* min-width: min-content; */
+	/* min-width: 110px; */
 	/* border: 4px double; */
+	min-width:min-content;
+	overflow:hidden;
+
 	
 	
 }
 .caption_inc {
 
+
+
+	/* border:1px solid; */
+	/* border-color:red; */
+	white-space: nowrap;
+	overflow: hidden;
+	/* min-width: min-content; */
 	max-height: 0;
 	overflow: hidden;
 }
@@ -326,6 +352,19 @@ img {
 
 }
 
+.mobilehome {
+    list-style-type: none; /* Remove bullets */
+	font-size:9px;
+	left: 7%;
+	/* text-align:center; */
+	z-index:9999;
+	position:absolute;
+	top:4%;
+	height:4%;
+	width:100%;
+	/* border: 1px solid; */
+}
+
 
 .toc {
   /* width: 200px; */
@@ -341,7 +380,7 @@ img {
 }
 
 .toc_mobile {
-	width: 40%;
+	width: 50%;
 	font-size: 20px;
 	position: absolute;
 	top: 50%;

@@ -24,6 +24,8 @@ if ( document.URL.includes("instant.html") ) {
 		this.classList.toggle("activeIdx")
 		document.querySelector('#second').classList.toggle('open');
 	});
+	
+
 }
 
 else {
