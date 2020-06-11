@@ -36,6 +36,16 @@ else {
 		this.classList.toggle("activeIdx")
 		document.querySelector('#second').classList.toggle('open');
 	});
+	
+	document.querySelector('#here3').addEventListener('click', function() {
+		this.classList.toggle("activeIdx")
+		document.querySelector('#third').classList.toggle('open');
+	});
+	
+	document.querySelector('#here4').addEventListener('click', function() {
+		this.classList.toggle("activeIdx")
+		document.querySelector('#fourth').classList.toggle('open');
+	});
 }
 
 function store(p) {

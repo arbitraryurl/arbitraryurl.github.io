@@ -210,6 +210,7 @@ img {
 	color: black;
 	list-style-type: none; /* Remove bullets */
 	margin-left:1%;
+	margin-top: none;
 	min-width: 110px;
 	/* border: 4px double; */
 	
@@ -258,7 +259,7 @@ img {
 
 
 .images {
-	border:1px solid;
+	/* border:1px solid; */
 	/* position:relative; */
 	margin-left: 4%;
 	max-width: 850px;
