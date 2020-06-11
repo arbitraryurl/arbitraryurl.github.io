@@ -210,6 +210,7 @@ img {
 	color: black;
 	list-style-type: none; /* Remove bullets */
 	margin-left:1%;
+	min-width: 110px;
 	/* border: 4px double; */
 	
 	
