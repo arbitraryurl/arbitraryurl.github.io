@@ -9,6 +9,7 @@
       .hide-mobile {
         display: none;
       }
+	  #hide_this{display:none}
     }
 
  @media only screen and (min-device-width: 769px) {
