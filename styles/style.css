@@ -203,12 +203,29 @@ img {
 	margin: -425px 0 0 0;
 }
 
-.caption_inc {
-	position: relative;
-	left:0%;
-	border: 4px double;
-	width = 1000px;
+
+.cap {
+	font-size: 10px;
+	line-height: 1.5;
+	color: black;
+	list-style-type: none; /* Remove bullets */
+	margin-left:1%;
+	/* border: 4px double; */
+	
+	
 }
+.caption_inc {
+
+	max-height: 0;
+	overflow: hidden;
+}
+
+.active_cap { 
+	height:auto;
+	max-height: 150px;
+	overflow: hidden;
+}
+
 
 
 
@@ -240,8 +257,9 @@ img {
 
 
 .images {
-	/* border:1px solid; */
-	position:relative;
+	border:1px solid;
+	/* position:relative; */
+	margin-left: 4%;
 	max-width: 850px;
 	height: 850px;	
 	left:4%;
