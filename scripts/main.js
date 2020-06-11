@@ -58,7 +58,8 @@ console.log(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  slideIndex = slideIndex - n;
+  showSlides(slideIndex);
 }
 
 // Thumbnail image controls
@@ -71,6 +72,7 @@ function showSlides(n) {
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("btn");
   var caps = document.getElementsByClassName("caption_inc");
+  // console.log(slideIndex);
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
