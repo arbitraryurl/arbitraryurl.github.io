@@ -107,12 +107,12 @@ img {
 	font-size: 18px;
 	transition: 0.6s ease;
 	user-select: none;
-	border: 1px solid;
+	/* border: 1px solid; */
 	background:none;
 	z-index: 1000;
 	/* border-color: #a2a9b1; */
 	cursor: pointer;
-	/* border: none; */
+	border: none;
 	outline: none;
 
 	overflow:hidden;
