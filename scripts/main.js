@@ -52,9 +52,15 @@ function store(p) {
 	localStorage.setItem("imnum", p);
 }
 
-var slideIndex = localStorage.getItem("imnum");;
-showSlides(slideIndex);
-console.log(slideIndex);
+var slideIndex = localStorage.getItem("imnum");
+if (slideIndex){
+	showSlides(slideIndex);
+	console.log(slideIndex);
+} else {
+	slideIndex = 0;
+	showSlides(slideIndex);
+}
+
 
 // Next/previous controls
 function plusSlides(n) {
