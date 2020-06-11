@@ -9,7 +9,10 @@
       .hide-mobile {
         display: none;
       }
-	  #hide_this{display:none}
+	  #hide_this{
+		  /* display:none; */
+		  font-size:8px;
+		  }
     }
 
  @media only screen and (min-device-width: 769px) {
@@ -280,10 +283,11 @@ img {
 	flex-wrap: nowrap;              /* default value; can be omitted */
 	justify-content: flex-start;
 	align-items:flex-start;
-	/* border: 2px dotted; */
+	border: 2px dotted;
 	top:5%;
 	left:3%;
-	width:96%;
+	right: 3%;
+	/* width:96%; */
 	height: 94%;
 	position:absolute;
 }
