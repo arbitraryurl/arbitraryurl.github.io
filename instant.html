@@ -3,115 +3,389 @@
 <head>
 <link href="styles/style.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 <title>TODAY</title>
 </head>
 <body>
 
+<div class = "hide-mobile">
+	<div class = "indent" id ="mob">
+		<div class = "hide-mobile">
+		<!-- <div class = "middle">	 -->
+			<div class = "toc">
+				<ul>
+					<center>
+						<li>
+						<button class="btn2" onclick="plusSlides(1)">&#8656</button>
+						&ensp;
+							<b>Contents</b>
+						&ensp;
+						<button class="btn2" onclick="plusSlides(-1)">&#8658</button></center>
+						</li>
 
-<div class = "indent" id ="mob">
-	<div class = "hide-mobile">
-	<!-- <div class = "middle">	 -->
-		<div class = "toc">	
-			<ul>
-				<center><li><b>Contents</center></li></b>	
-				
-				<button type="button" class="collapsible" id="here">
-					1 <a href="#" onClick="return false;">Instants</a>
-				</button>
-				
-				<div class = "contentOpen coll" id = "first">
-					<div class = "toc2">
-					  <li>1.1 <button class="btn" onclick="currentSlide(1)">Instant #1</button></li>
-					  <li>1.2 <button class="btn active" onclick="currentSlide(2)">Instant #2</button></li>
-					  <li>1.3 <button class="btn" onclick="currentSlide(3)">Instant #3</button></li>
-					  <li>1.4 <button class="btn" onclick="currentSlide(4)">Instant #4</button></li>
+					<button type="button" class="collapsibleidx" id="here6">
+						1 <a href="#" onClick="return false;">Digital Purgatory</a>
+					</button>
+
+					<div class = "content coll" id = "sixth">
+						<div class = "toc2">
+							<li>1.1 <button class="btn active" onclick="currentSlide(1)">S. Podophyllum</button></li>
+							<li>1.2 <button class="btn" onclick="currentSlide(2)">Untitiled</button></li>
+							<li>1.3 <button class="btn" onclick="currentSlide(3)">distance_to_wall</button></li>
+						</div>
 					</div>
-				</div>
-				
-				<button type="button" class="collapsibleidx" id="here2">
-					2 <a href="#" onClick="return false;">Loops</a>
-				</button>
-				
-				<div class = "content coll" id = "second">
-					<div class = "toc2">
-						<li>2.1 <a href="instant.html">Loop #1</a></li>
-						<li>2.2 <a href="instant.html">Loop #2</a></li>
-						<li>2.3 <a href="instant.html">Loop #3</a></li>
+
+					<button type="button" class="collapsibleidx" id="here2">
+						2 <a href="#" onClick="return false;">Perpetuum Mobile</a>
+					</button>
+
+
+					<div class = "content coll" id = "second">
+						<div class = "toc2">
+							<li>2.1 <button class="btn" onclick="currentSlide(4)">p9</button></li>
+							<li>2.2 <button class="btn" onclick="currentSlide(5)">c3</button></li>
+							<li>2.3 <button class="btn" onclick="currentSlide(6)">i2</button></li>
+							<li>2.4 <button class="btn" onclick="currentSlide(7)">sq8</button></li>
+						</div>
 					</div>
+
+					<button type="button" class="collapsibleidx" id="here">
+						3 <a href="#" onClick="return false;">Instants</a>
+					</button>
+
+					<div class = "content coll" id = "first">
+						<div class = "toc2">
+						  <li>3.1 <button class="btn" onclick="currentSlide(8)">Instant #1</button></li>
+						  <li>3.2 <button class="btn" onclick="currentSlide(9)">Instant #2</button></li>
+						  <li>3.3 <button class="btn" onclick="currentSlide(10)">Instant #3</button></li>
+						  <li>3.4 <button class="btn" onclick="currentSlide(11)">Instant #4</button></li>
+						  <li>3.5 <button class="btn" onclick="currentSlide(12)">Instant #5</button></li>
+						  <li>3.6 <button class="btn" onclick="currentSlide(13)">Instant #6</button></li>
+						  <li>3.7 <button class="btn" onclick="currentSlide(14)">Instant #7</button></li>
+						  <li>3.8 <button class="btn" onclick="currentSlide(15)">Instant #8</button></li>
+						  <li>3.9 <button class="btn" onclick="currentSlide(16)">Instant #9</button></li>
+						  
+						</div>
+					</div>
+
+
+
+				<div class = "no_coll">
+					<button type="button" class="no_coll">
+						4 <a href="#" onClick="currentSlide(17);">About</a>
+					</button><br>
+					<button type="button" class="no_coll">
+						5 <a href="#" onClick="currentSlide(18);">Contact</a>
+					</button>
 				</div>
-				
-				<li>3 <a href="http://www.google.com">About</a></li>
-				<li>4 <a href="http://www.google.com">CV</a></li>
-				<li>5 <a href="http://www.google.com">Contact</a></li>			
 			</ul>
+
+
+
+			</div>
+		<!-- </div> -->
 		</div>
-	<!-- </div> -->
+
+
+
+
+		<div class = "images" id = "slides">
+
+			<div class = "mySlides">
+				<div class = "desktopWrapper">
+					<iframe src="https://player.vimeo.com/video/457614710" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class = "mySlides">
+				<div class = "desktopWrapper">
+					<iframe src="https://player.vimeo.com/video/457614176" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class = "mySlides">
+				<div class = "desktopWrapper">
+					<iframe src="https://player.vimeo.com/video/470058053" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class = "mySlides">
+				<div class = "desktopWrapper">
+					<iframe src="https://player.vimeo.com/video/454569186" width="640" height="640" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class = "mySlides">
+				<div class = "desktopWrapper">
+					<iframe src="https://player.vimeo.com/video/454569513" width="640" height="640" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class = "mySlides">
+				<div class = "desktopWrapper">
+					<iframe src="https://player.vimeo.com/video/421694786" width="640" height="634" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class = "mySlides">
+				<div class = "desktopWrapper">
+					<iframe src="https://player.vimeo.com/video/454571700" width="640" height="640" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class = "mySlides">
+					<img src="images/xd10.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+					<img src="images/xd4.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+					<img src="images/xd7.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+					<img src="images/xd2.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+					<img src="images/xd6.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+					<img src="images/xd8.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+					<img src="images/xd1.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+					<img src="images/xd9.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+					<img src="images/xd3.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+				<div style = "text-align:left;">
+					<p>
+						<b>class</b> me:<br>
+							&ensp; &ensp; name = "Daniel Vadasz"<br>
+							&ensp; &ensp; location = "Houston, TX, USA"<br>
+							&ensp; &ensp; background = "B.Sc. Electrical Engineering, 2019"<br>
+							&ensp; &ensp; interests = "Natural phenoma, created artifically"<br>
+
+					</p>
+				</div>
+			</div>
+
+			<div class = "mySlides">
+				<div style = "text-align:left;">
+					<p>email@email.com</p>
+
+				</div>
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+		<div class = "cap" id = "hide_this">
+			<div class = "caption_inc">
+				<li><i>S. Podophyllum Receives the "Critique of Pure Reason"</i></li>
+				<li>2020</li>
+				<li>Plant, desk lamp, microcontroller</li>
+				<li>12 x 12 x 12 in</li>		
+
+				<button type="button" class="collapsibleidx" id="here7">
+					<a href="#" onClick="return false;">More</a>
+				</button>
+
+
+				<div class = "content coll" style = "text-align:left;padding-top:2vh;max-width:20vw;overflow:wrap;white-space:normal; " id = "seventh">
+					<p>
+					Table lamped modified to "blink out" the bitstream of Kant's "Critique of Pure Reason."
+					Each character of the original text transmitted to S. podophyllum as a series of light/dark flashes, e.g.:
+
+					<br>
+					<br>
+					H &#8611 01001000 &#8611 Off/On/Off/Off/On/Off/Off/Off
+
+					<br>
+					<br>
+					The process is repeated indefinitely. Over time, the information of the book is woven into S. podophyllum's being as its sole sore of energy.
+					</p>
+				</div>	
+			</div>
+			
+			<div class = "caption_inc">
+				<li><i>Untitled</i></li>
+				<li>2020</li>
+				<li>Solenoid, twine, tape, microcontroller</li>
+				<li>Installation</li>
+
+				<button type="button" class="collapsibleidx" id="here8">
+					<a href="#" onClick="return false;">More</a>
+				</button>
+
+
+				<div class = "content coll" style = "text-align:left;padding-top:2vh;max-width:20vw;overflow:wrap;white-space:normal; " id = "eigth">
+					<p>
+					Linear solenoid attached to jute twine. The number of threads is the maximum that the solenoid has the force to pull. With each pulse, the solenoid tensions the twine, causing it to resonate briefly before being released.
+				</div>	
+
+			</div>
+			<div class = "caption_inc">
+				<li><i>distance_to_wall</i></li>
+				<li>2020</li>
+				<li>Thermal printer, distance sensor, microcontroller</li>
+				<li>12 x 12 x 36 in</li>
+
+				<button type="button" class="collapsibleidx" id="here9">
+					<a href="#" onClick="return false;">More</a>
+				</button>
+
+
+				<div class = "content coll" style = "text-align:left;padding-top:2vh;max-width:20vw;overflow:wrap;white-space:normal; " id = "ninth">
+					<p>
+					System that measures and prints its own distance from the nearest wall on a looped roll of thermal paper. Eventually, due to repeated printing, the data dissolves into a solid black line.
+				</div>	
+			</div>
+			<div class = "caption_inc">
+				<li><i>p9</i></li>
+				<li>2020</li>
+				<li>Digital Animation</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>c3</i></li>
+				<li>2020</li>
+				<li>Digital Animation</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>i2</i></li>
+				<li>2020</li>
+				<li>Digital Animation</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>sq8</i></li>
+				<li>2020</li>
+				<li>Digital Animation</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>Untitled (Bedroom 1)</i></li>
+				<li>2019</li>
+				<li>Instant film</li>
+				<li>108 x 86 mm</li>
+			</div>
+			<div class = "caption_inc active_cap">
+				<li><i>Untitled (Basement 1)</i></li>
+				<li>2019</li>
+				<li>Instant film</li>
+				<li>86 x 108 mm</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>Untitled (Bathroom 1)</i></li>
+				<li>2020</li>
+				<li>Instant film</li>
+				<li>108 x 86mm</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>Untitled (Roof 1)</i></li>
+				<li>2019</li>
+				<li>Instant film</li>
+				<li>86 x 108 mm</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>Untitled (Bathroom 3)</i></li>
+				<li>2020</li>
+				<li>Instant film</li>
+				<li>86 x 108 mm</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>Untitled (Backyard 1)</i></li>
+				<li>2020</li>
+				<li>Instant film</li>
+				<li>86 x 108 mm</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>Untitled (Roof 2)</i></li>
+				<li>2020</li>
+				<li>Instant film</li>
+				<li>108 x 86 mm</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>Untitled (Bedrooom 2)</i></li>
+				<li>2020</li>
+				<li>Instant film</li>
+				<li>108 x 86 mm</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>Untitled (Roof 3)</i></li>
+				<li>2019</li>
+				<li>Instant film</li>
+				<li>86 x 108 mm</li>
+			</div>
+		</div>
+
+		<div class = "nbtns">
+		</div>
+
+
+
+
+
+
 	</div>
-
-
-
-
-	<div class = "images">
-		<div class = "mySlides">
-				<img src="images/xd1.jpg"></img>				
-		</div>
-		
-		<div class = "mySlides">
-				<img src="images/xd2.jpg"></img> 
-		</div>
-		
-		<div class = "mySlides">
-				<img src="images/xd3.jpg">
-		</div>
-		
-		<div class = "mySlides">
-				<img src="images/xd4.jpg">
-		</div>
-		
-		<button class="next" onclick="plusSlides(-1)" id = "n"></button>
-		<button class="prev" onclick="plusSlides(1)" id = "p"></button>
-	</div>
-	
-	
-	<div class = "cap" id = "hide_this">
-		<div class = "caption_inc">
-			<li><i>Untitled (Roof 1)</i></li>
-			<li>2020</li>
-			<li>Instant film</li>
-			<li>86 x 108mm</li>
-		</div>
-		<div class = "caption_inc active_cap">
-			<li><i>Untitled (Roof 2)</i></li>
-			<li>2019</li>
-			<li>Instant film</li>
-			<li>108 x 86mm</li>
-		</div>
-		<div class = "caption_inc">
-			<li><i>Untitled (Roof 3)</i></li>
-			<li>2020</li>
-			<li>Instant film</li>
-			<li>108 x 86mm</li>
-		</div>
-		<div class = "caption_inc">
-			<li><i>Untitled (Basement 1)</i></li>
-			<li>2019</li>
-			<li>Instant film</li>
-			<li>108 x 86mm</li>
-		</div>
-	</div>
-	
-
-	
-
-
-	
 </div>
 
 <div class = "show-mobile">
-<div class = "mobilehome">
-	<li>[<a href="index.html">Home</a>]</li>
-</div>
-	
+	<div class = "mobilehome">
+		[<a style ="color:DarkBlue;" href="index.html">HOME</a>]
+	</div>
+
+	<div class="column">
+
+		<div class = "all-img-mob">
+	    <img class = "each-img-mob" src="images/xd10.jpg">
+	    <img class = "each-img-mob" src="images/xd4.jpg">
+	    <img class = "each-img-mob" src="images/xd7.jpg">
+	    <img class = "last-img-mob" src="images/xd2.jpg">
+
+
+
+
+
+
+		<button type="button" class="collapsibleidx" id="here5">
+			<a href="#" onClick="return false;">INFO</a>
+		</button>
+
+		<div class = "content coll" style = "text-align:left;padding-top:2vh;" id = "fifth">
+			<p>
+			A series of photographs created with the limitation that scenes must be in or directly
+			surrounding my apartment building.
+
+			</p>
+			<ul>
+				<li>1. <i>Bedroom 1.</i> Instant Film. 108x86mm. 2020.</li>
+				<li>2. <i>Basement 1.</i> Instant Film. 86x108mm. 2020.</li>
+				<li>3. <i>Bathroom 1.</i> Instant Film. 108x86mm. 2020.</li>
+				<li>4. <i>Roof 1.</i> Instant Film. 86x108mm. 2020.</li>
+			</ul>
+		</div>
+
+
+
+  </div>
+	</div>
 </div>
 
 
@@ -119,4 +393,4 @@
 
 <script src="scripts/main.js"></script>
 </body>
-</html> 
+</html>
