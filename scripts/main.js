@@ -46,6 +46,10 @@ if ( document.URL.includes("instant.html") ) {
     this.classList.toggle("activeIdx")
     document.querySelector('#ninth').classList.toggle('open');
   });
+  document.querySelector('#here10').addEventListener('click', function() {
+    this.classList.toggle("activeIdx")
+    document.querySelector('#tenth').classList.toggle('open');
+  });
 
 
 }
@@ -74,7 +78,8 @@ else {
 
 var first = [1,2,3]
 var second = [4,5,6,7]
-var third = [8,9,10,11,12,13,14,15,16,17]
+var third = [8,9,10,11,12,13,14,15,16]
+var fourth = [17, 18, 19]
 
 function store(p) {
 	localStorage.setItem("imnum", p);
@@ -94,6 +99,7 @@ if (slideIndex){
 const first_logic = first.includes(parseInt(slideIndex));
 const second_logic = second.includes(parseInt(slideIndex));
 const third_logic = third.includes(parseInt(slideIndex));
+const fourth_logic = fourth.includes(parseInt(slideIndex));
 
 console.log(second_logic)
 
@@ -109,6 +115,10 @@ else if (second_logic){
 else if (third_logic){
   document.querySelector('#here').classList.toggle("activeIdx")
   document.querySelector('#first').classList.toggle('open');  
+}
+else if (fourth_logic){
+  document.querySelector('#here10').classList.toggle("activeIdx")
+  document.querySelector('#tenth').classList.toggle('open');  
 }
 
 

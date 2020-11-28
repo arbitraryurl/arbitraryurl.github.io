@@ -31,7 +31,7 @@
 						<div class = "toc2">
 							<li>1.1 <button class="btn active" onclick="currentSlide(1)">S. Podophyllum</button></li>
 							<li>1.2 <button class="btn" onclick="currentSlide(2)">Untitiled</button></li>
-							<li>1.3 <button class="btn" onclick="currentSlide(3)">distance_to_wall</button></li>
+							<li>1.3 <button class="btn" onclick="currentSlide(3)">get_dist</button></li>
 						</div>
 					</div>
 
@@ -50,7 +50,7 @@
 					</div>
 
 					<button type="button" class="collapsibleidx" id="here">
-						3 <a href="#" onClick="return false;">Instants</a>
+						3 <a href="#" onClick="return false;">Scenes From</a>
 					</button>
 
 					<div class = "content coll" id = "first">
@@ -68,14 +68,26 @@
 						</div>
 					</div>
 
+					<button type="button" class="collapsibleidx" id="here10">
+						4 <a href="#" onClick="return false;">Misc</a>
+					</button>
+
+					<div class = "content coll" id = tenth>
+						<div class = "toc2">
+						  <li>4.1 <button class="btn" onclick="currentSlide(17)">Constellation</button></li>
+						  <li>4.2 <button class="btn" onclick="currentSlide(18)">Help Me, Friend</button></li>
+						  <li>4.3 <button class="btn" onclick="currentSlide(19)">Frames</button></li>					  
+						</div>
+					</div>
+
 
 
 				<div class = "no_coll">
 					<button type="button" class="no_coll">
-						4 <a href="#" onClick="currentSlide(17);">About</a>
+						5 <a href="#" onClick="currentSlide(20);">About</a>
 					</button><br>
 					<button type="button" class="no_coll">
-						5 <a href="#" onClick="currentSlide(18);">Contact</a>
+						6 <a href="#" onClick="currentSlide(21);">Contact</a>
 					</button>
 				</div>
 			</ul>
@@ -170,6 +182,23 @@
 			</div>
 
 			<div class = "mySlides">
+					<img src="images/constellation.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+					<img src="images/help.jpg"></img>
+			</div>
+
+			<div class = "mySlides">
+				<div style = "text-align:left;">
+					<p>
+						<a href = "https://drive.google.com/file/d/1YQPk1ZYfQnohWdKAmkIh1uX3u6FBYOij/view?usp=sharing">Click to see photobook.</a>
+
+					</p>
+				</div>
+			</div>
+
+			<div class = "mySlides">
 				<div style = "text-align:left;">
 					<p>
 						<b>class</b> me:<br>
@@ -184,7 +213,7 @@
 
 			<div class = "mySlides">
 				<div style = "text-align:left;">
-					<p>email@email.com</p>
+					<a href="mailto:telematic.daniel@gmail.com">telematic.daniel@gmail.com</a>
 
 				</div>
 			</div>
@@ -212,7 +241,7 @@
 
 				<div class = "content coll" style = "text-align:left;padding-top:2vh;max-width:20vw;overflow:wrap;white-space:normal; " id = "seventh">
 					<p>
-					Table lamped modified to "blink out" the bitstream of Kant's "Critique of Pure Reason."
+					Table lamp modified to "blink out" the bitstream of Kant's "Critique of Pure Reason."
 					Each character of the original text transmitted to S. podophyllum as a series of light/dark flashes, e.g.:
 
 					<br>
@@ -244,7 +273,7 @@
 
 			</div>
 			<div class = "caption_inc">
-				<li><i>distance_to_wall</i></li>
+				<li><i>get_dist</i></li>
 				<li>2020</li>
 				<li>Thermal printer, distance sensor, microcontroller</li>
 				<li>12 x 12 x 36 in</li>
@@ -333,6 +362,19 @@
 				<li>Instant film</li>
 				<li>86 x 108 mm</li>
 			</div>
+
+			<div class = "caption_inc">
+				<li><i>Constellation</i></li>
+				<li>2019</li>
+				<li>Oranges, thread, needles, plywood</li>
+				<li>12 x 12 x 3 in</li>
+			</div>
+			<div class = "caption_inc">
+				<li><i>Help Me, Friend</i></li>
+				<li>2019</li>
+				<li>Cast, chain, hooks, twine</li>
+				<li>30 x 30 x 30 in</li>
+			</div>
 		</div>
 
 		<div class = "nbtns">
@@ -358,6 +400,11 @@
 	    <img class = "each-img-mob" src="images/xd4.jpg">
 	    <img class = "each-img-mob" src="images/xd7.jpg">
 	    <img class = "last-img-mob" src="images/xd2.jpg">
+	    <img class = "last-img-mob" src="images/xd6.jpg">
+	    <img class = "last-img-mob" src="images/xd8.jpg">
+	    <img class = "last-img-mob" src="images/xd1.jpg">
+	    <img class = "last-img-mob" src="images/xd9.jpg">
+	    <img class = "last-img-mob" src="images/xd3.jpg">
 
 
 
@@ -375,10 +422,15 @@
 
 			</p>
 			<ul>
-				<li>1. <i>Bedroom 1.</i> Instant Film. 108x86mm. 2020.</li>
-				<li>2. <i>Basement 1.</i> Instant Film. 86x108mm. 2020.</li>
-				<li>3. <i>Bathroom 1.</i> Instant Film. 108x86mm. 2020.</li>
-				<li>4. <i>Roof 1.</i> Instant Film. 86x108mm. 2020.</li>
+				<li>1. <i>Untitled (Bedroom 1).</i> Instant Film. 108x86mm. 2020.</li>
+				<li>2. <i>Untitled (Basement 1).</i> Instant Film. 86x108mm. 2020.</li>
+				<li>3. <i>Untitled (Bathroom 1).</i> Instant Film. 108x86mm. 2020.</li>
+				<li>4. <i>Untitled (Roof 1).</i> Instant Film. 86x108mm. 2020.</li>
+				<li>5. <i>Untitled (Bathroom 3).</i> Instant Film. 86x108mm. 2020.</li>
+				<li>6. <i>Untitled (Backyard 1).</i> Instant Film. 86x108mm. 2020.</li>
+				<li>7. <i>Untitled (Roof 2).</i> Instant Film. 108x86mm. 2020.</li>
+				<li>8. <i>Untitled (Bedrooom 2).</i> Instant Film. 108x86mm. 2020.</li>
+				<li>9. <i>Untitled (Roof 3).</i> Instant Film. 86x108mm. 2020.</li>
 			</ul>
 		</div>
 
