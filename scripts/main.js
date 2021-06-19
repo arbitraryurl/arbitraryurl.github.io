@@ -50,6 +50,10 @@ if ( document.URL.includes("instant.html") ) {
     this.classList.toggle("activeIdx")
     document.querySelector('#tenth').classList.toggle('open');
   });
+  document.querySelector('#here11').addEventListener('click', function() {
+    this.classList.toggle("activeIdx")
+    document.querySelector('#eleventh').classList.toggle('open');
+  });
 
 
 }
@@ -74,12 +78,17 @@ else {
 		this.classList.toggle("activeIdx")
 		document.querySelector('#fourth').classList.toggle('open');
 	});
+  document.querySelector('#here5').addEventListener('click', function() {
+    this.classList.toggle("activeIdx")
+    document.querySelector('#fifth').classList.toggle('open');
+  });
 }
 
 var first = [1,2,3]
 var second = [4,5,6,7,8,9]
 var third = [10,11,12,13,14,15,16,17,18]
 var fourth = [19,20,21]
+var fifth = [22,23]
 
 function store(p) {
 	localStorage.setItem("imnum", p);
@@ -100,6 +109,7 @@ const first_logic = first.includes(parseInt(slideIndex));
 const second_logic = second.includes(parseInt(slideIndex));
 const third_logic = third.includes(parseInt(slideIndex));
 const fourth_logic = fourth.includes(parseInt(slideIndex));
+const fifth_logic = fifth.includes(parseInt(slideIndex));
 
 console.log(second_logic)
 
@@ -120,6 +130,12 @@ else if (fourth_logic){
   document.querySelector('#here10').classList.toggle("activeIdx")
   document.querySelector('#tenth').classList.toggle('open');  
 }
+
+else if (fifth_logic){
+  document.querySelector('#here11').classList.toggle("activeIdx")
+  document.querySelector('#eleventh').classList.toggle('open');  
+}
+
 
 
 // Next/previous controls
