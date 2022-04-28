@@ -15,10 +15,10 @@ if (window.location.pathname === '/' || document.URL.includes("index.html")){
 else{
 	console.log("MAIN")
 	// var datas = ["1", "2", "3"];
-	// localStorage["datas"] = JSON.stringify(datas);
+	// sessionStorage["datas"] = JSON.stringify(datas);
 	//
 	// // Retrieve
-	// var stored_datas = JSON.parse(localStorage["datas"]);
+	// var stored_datas = JSON.parse(sessionStorage["datas"]);
 	// console.log(stored_datas);
 	const myButtons = document.querySelectorAll("#here_instant");
 	for (const btn of myButtons) {
@@ -32,28 +32,39 @@ else{
 
 
 
+
 //store slide number to present on new page
 function store(p) {
-	localStorage.setItem("imnum", p);
+	sessionStorage.setItem("imnum", p);
+	console.log(p);
 }
 
 //store div id to open on new page
 function txt_store(t) {
-	localStorage.setItem("nextopen", t);
+	sessionStorage.setItem("nextopen", t);
 	console.log(t)
 }
 
+var div_flag = sessionStorage.getItem("flag");
+console.log(div_flag);
+
 // Retrieve
-var stored_datas = JSON.parse(localStorage["arr"]);
+
 console.log(stored_datas);
 
 //if we have stored divs and we're not on the index page
-if (stored_datas && !(window.location.pathname === '/' || document.URL.includes("index.html")) ){
+if (div_flag != null && !(window.location.pathname === '/' || document.URL.includes("index.html")) ){
+	var stored_datas = JSON.parse(sessionStorage["arr"]);
 	var arr = stored_datas;
+}
+else if (div_flag == null && !(window.location.pathname === '/' || document.URL.includes("index.html"))){
+	var arr = ["instant1"];
 }
 else{
 	var arr = [];
 }
+
+console.log(arr);
 
 //append div to be opened to array
 function carryOn(d){
@@ -66,21 +77,21 @@ function carryOn(d){
 		console.log(arr_ind);
 		arr.splice(arr_ind, 1);
 	}
-
+	sessionStorage.setItem("flag", 1);
 	console.log(arr);
 }
 
 //save array to local memory
 function setSwitch(){
-	localStorage["arr"] = JSON.stringify(arr);
+	sessionStorage["arr"] = JSON.stringify(arr);
 }
 
 
 
 
 //fetching local memory
-var thatopen = localStorage.getItem("nextopen");
-var slideIndex = parseInt(localStorage.getItem("imnum"));
+var thatopen = sessionStorage.getItem("nextopen");
+var slideIndex = parseInt(sessionStorage.getItem("imnum"));
 
 if (slideIndex){
 	showArrow(slideIndex);
@@ -102,10 +113,10 @@ if (slideIndex){
 const myButtons = document.querySelectorAll("#here_instant");
 console.log("HERE");
 console.log(myButtons);
-var arrayLength = stored_datas.length;
+var arrayLength = arr.length;
 for (const btn of myButtons) {
 	for (var i = 0; i<arrayLength; i++){
-		divToOpen = stored_datas[i];
+		divToOpen = arr[i];
 		console.log(divToOpen);
 		if (btn.getAttribute("data-for") == divToOpen){
 			btn.classList.toggle("activeIdx");
