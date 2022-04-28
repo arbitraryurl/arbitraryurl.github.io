@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="styles/style.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>ARBITRARY URL</title>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+
+<div class = "hide-mobile">
+	<div class = "indent" id ="mob">
+		<div class = "hide-mobile">
+		<!-- <div class = "middle">	 -->
+		<script src="scripts/nav.js"></script>
+
+		<!-- </div> -->
+		</div>
+
+
+
+
+		<div class = "images" id = "slides">
+
+			<div class = "mySlidesNew">
+                <img src="images/rng.jpg"></img>
+				
+				<br>
+				<br>
+				<br>
+				<img src="images/rng_close.jpg"></img>
+				<br>
+				<br>
+				<br>
+                <div class='embed-container'>
+                    <iframe src='https://player.vimeo.com/video/703570032?h=d406f1f919' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </div>
+				
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+		<div class = "cap">
+			<div class = "newCap">
+				<li><i>43% Random</i></li>
+				<li>2022</li>
+				<li>Number toy, DC motor, camera, microcontroller, plastic</li>
+				<li>2.5 x 4 x 3 in</li>
+				<br>
+				<li>Inkjet print</li>
+				<li>12 x 36 in</li>
+			</div>
+
+			<div class = "content.open" style = "text-align:left;padding-top:2vh;max-width:20vw;overflow:wrap;white-space:normal; " id = "eigth">
+				<p>
+					Hover over images to scroll.
+
+					<br><br>
+                    I found this toy in a second hand shop. 
+                    It has a clear plastic shell with small tiles numbered 1-50 on the inside. 
+                    There is a small "selector column" on the left which
+                    can be used to separate a few of the tiles from the rest. 
+                    Who knows its original purpose, but to me it seems a sort of lottery number selector.
+                    <br><br>
+                    
+                    I was curious, how random are these numbers really? 
+                    I built a small testing rig, a DC motor with a hall sensor attached to detect each full rotation. 
+                    On each spin, a photograph was taken. Using computer vision techniques, the tiles were individually 
+                    extracted from the selector column of each image. They were then identified 
+                    using a neural network. In total, 42 kilobits of data was collected.
+                    <br><br>
+                    
+                    The bitstream was run through the NIST's Statistical Test Suite for Random and Pseudorandom Number Generators. 
+                    In the end, it was found to be random in 7 of the tests and non-random in 9.
+                    <br><br>
+                    
+                    What a shame. I really wanted it to be more random.
+                    
+                    
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+	</div>
+</div>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
