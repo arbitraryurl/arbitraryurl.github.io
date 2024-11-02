@@ -1,145 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="styles/style.css" rel="stylesheet">
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<title>ARBITRARY URL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>ARBITRARY URL</title>
 </head>
 <body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="header" id = "head">
+        <p2>
+            <a href = "pages/about.html">[About]</a>&nbsp;&nbsp;<a href = "index.html">[Home]</a>
+        </p2>
+    </div>
+    <div class = "grid-container" id = "grid">
+        <div class="image-grid" id="test">
+            <a href = "pages/grassland.html"><div class="image-item">
+                <img src="images/grassland/g1.jpg" alt="Image 2">
+                <p1><b>2024</b></p1>
+                <p2>Remanence of a Grassland</p2>
+            </div></a>
+            <a href = "pages/teeth.html"><div class="image-item">
+                <img src="images/teeth/t1.jpg" alt="Image 1">
+                <p1><b>2024</b></p1>
+                <p2>I Often Dream Of My Teeth Falling Out</p2>
+            </div></a>
+            <a href = "pages/pollen.html"><div class="image-item">
+                <img src="images/pollen/pollen1.jpg" alt="Image 3">
+                <p1><b>2023</b></p1>
+                <p2>Electrostatic Pollen</p2>
+            </div></a>
+            <a href = "pages/decay.html"><div class="image-item">
+                <img src="images/decay/decay1.png" alt="Image 4">
+                <p1><b>2023</b></p1>
+                <p2>DECAY</p2>
+            </div></a>
+            <a href="pages/blink.html"><div class="image-item">
+                <img src="images/blink/blink_full.jpg" alt="Image 7">
+                <p1><b>2022</b></p1>
+                <p2>Blink! (It's Irresistible)</p2>
+            </div></a>
+            <a href = "pages/rng.html"><div class="image-item">
+                <img src="images/random/rng_close.jpg" alt="Image 5">
+                <p1><b>2022</b></p1>
+                <p2>43% Random</p2>
+            </div></a>
+            <a href = "pages/stop.html"><div class="image-item">
+                <img src="images/stop/brass.jpg" alt="Image 6">
+                <p1><b>2022</b></p1>
+                <p2>I Can't Stop</p2>
+            </div></a>
+            <a href = "pages/amp.html"><div class="image-item">
+                <img src="images/amp/amp.jpg" alt="Image 8">
+                <p1><b>2021</b></p1>
+                <p2>L94 Headphone Amp</p2>
+            </div></a>
 
-<div class = "hide-mobile">
-<div class = "center">
-	<div class = "toc">
-		<ul>
-			<center><li><b>Contents</center></li></b>
+            <a href = "pages/reason.html"><div class="image-item">
+                <img src="images/reason/reason.jpg" alt="Image 8">
+                <p1><b>2020</b></p1>
+                <p2>S. Podophyllum</p2>
+            </div></a>
+            <!-- Add more image items here -->
+        </div>
+    </div>
 
-			<button data-for = "item1" type="button" class="collapsibleidx" id="here" onclick="carryOn('instant1');">
-				1 <a href="#" onClick="return false;">Perturbations</a>
-			</button>
-
-			<div class = "content coll" id = "item1">
-				<div class = "toc2">
-					<li>1.1 <a href="blinker.html" onclick="store(1);setSwitch();">Blink!</a></li>
-					<li>1.2 <a href="rng.html" onclick="store(2);setSwitch();">43% Random</a></li>
-					<li>1.3 <a href="stop.html" onclick="store(3);setSwitch();">I Can't Stop</a></li>
-				</div>
-			</div>
-
-			<button data-for = "item2" type="button" class="collapsibleidx" id="here" onclick="carryOn('instant2');">
-				2 <a href="#" onClick="return false;">Undersampled</a>
-			</button>
-
-			<div class = "content coll" id = "item2">
-				<div class = "toc2">
-					<li>2.1 <a href="220grit.html" onclick="store(4);setSwitch();">220 Grit</a></li>
-					<li>2.2 <a href="irrational.html" onclick="store(5);setSwitch();">Irrational</a></li>
-					<li>2.3 <a href="sunset.html" onclick="store(6);setSwitch();">Sunset</a></li>
-					<li>2.4 <a href="holder1.html" onclick="store(7);setSwitch();">Coprime</a></li>
-					<li>2.5 <a href="holder2.html" onclick="store(8);setSwitch();">Standard</a></li>
-					<li>2.6 <a href="traces.html" onclick="store(9);setSwitch();">Test Relic</a></li>
-					<li>--- <a href="thoughts.html" onclick="store(10);setSwitch();">Thoughts</a></li>
-				</div>
-			</div>
-
-
-			<button data-for = "item3" type="button" class="collapsibleidx" id="here" onclick="carryOn('instant3');">
-				3 <a href="#" onClick="return false;">Digital Purgatory</a>
-			</button>
-
-			<div class = "content coll" id = "item3">
-				<div class = "toc2">
-					<li>3.1 <a href="spodophyllum.html" onclick="store(11);setSwitch();">S. Podophyllum</a></li>
-					<li>3.2 <a href="finding_myself.html" onclick="store(12);setSwitch();">Finding Myself</a></li>
-				</div>
-			</div>
-
-			<button data-for = "item5" type="button" class="collapsibleidx" id="here" onclick="carryOn('instant5');">
-				4 <a href="#" onClick="return false;">Misc</a>
-			</button>
-
-			<div class = "content coll" id = "item5">
-				<div class = "toc2">
-					<li>5.1 <a href="constellation.html" onclick="store(13);setSwitch();">Constellation</a></li>
-					<li>5.2 <a href="friend.html" onclick="store(14);setSwitch();">Help Me, Friend</a></li>
-				</div>
-			</div>
-
-			<button data-for = "item6" type="button" class="collapsibleidx" id="here" onclick="carryOn('instant6');">
-				5 <a href="#" onClick="return false;">Engineering</a>
-			</button>
-
-			<div class = "content coll" id = "item6">
-				<div class = "toc2">
-					<li>6.1 <a href="l94.html" onclick="store(15);setSwitch();">L94 Amp</a></li>
-					<li>6.2 <a href="voc.html" onclick="store(16);setSwitch();">VOC Sensing Drone</a></li>
-
-				</div>
-			</div>
-
-
-
-			<div class = "no_coll">
-				<button type="button" class="no_coll">
-					6 <a href="about_desktop.html" onclick="store(17);setSwitch();">About</a>
-				</button><br>
-			</div>
-		</ul>
-	</div>
-</div>
-</div>
-
-<div class = "show-mobile">
-<!-- <div class = "center"> -->
-	<div class = "toc_mobile">
-		<ul>
-			<center><li><b>Contents</center></li></b>
-
-			<!-- <button type="button" class="collapsibleidx" id="here3">
-				1 <a href="#" onClick="return false;">Instants</a>
-			</button> -->
-
-			<!-- <div class = "content coll" id = "third">
-				<div class = "toc2">
-					<li>1.1 <a href="instant.html" onclick="store(1)">Instant #1</a></li>
-					<li>1.2 <a href="instant.html" onclick="store(2)">Instant #2</a></li>
-					<li>1.3 <a href="instant.html" onclick="store(3)">Instant #3</a></li>
-					<li>1.4 <a href="instant.html" onclick="store(4)">Instant #4</a></li>
-					<li>1.5 <a href="instant.html" onclick="store(5)">Instant #5</a></li>
-					<li>1.6 <a href="instant.html" onclick="store(6)">Instant #6</a></li>
-					<li>1.7 <a href="instant.html" onclick="store(7)">Instant #7</a></li>
-					<li>1.8 <a href="instant.html" onclick="store(8)">Instant #8</a></li>
-					<li>1.9 <a href="instant.html" onclick="store(9)">Instant #9</a></li>
-					<li>1.10 <a href="instant.html" onclick="store(10)">Instant #10</a></li>
-				</div>
-			</div> -->
-
-
-			<!-- <button type="button" class="collapsibleidx" id="here4">
-				2 <a href="#" onClick="return false;">Loops</a>
-			</button> -->
-
-			<!-- <div class = "content coll" id = "fourth">
-				<div class = "toc2">
-					<li>2.1 <a href="instant.html">Loop #1</a></li>
-					<li>2.2 <a href="instant.html">Loop #2</a></li>
-					<li>2.3 <a href="instant.html">Loop #3</a></li>
-					<li>2.4 <a href="instant.html">Loop #4</a></li>
-				</div>
-			</div> -->
-
-			<li>1 <a href="perturbations.html">Perturbations</a></li>
-			<li>2 <a href="undersampled.html">Undersampled</a></li>
-			<li>3 <a href="purgatory.html">Digital Purgatory</a></li>
-			<li>4 <a href="misc.html">Misc</a></li>
-			<li>5 <a href="engineering.html">Engineering</a></li>
-			<li>6 <a href="about.html">About</a></li>
-		</ul>
-	</div>
-<!-- </div> -->
-</div>
-
+<script type="text/javascript">
+    on_index = true;
+</script>
 <script src="scripts/main.js"></script>
+
 </body>
 </html>

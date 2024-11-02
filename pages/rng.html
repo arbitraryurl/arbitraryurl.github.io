@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>ARBITRARY URL</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="header" id ="head">
+        <p2>
+            <a href = "about.html">[About]</a>&nbsp;&nbsp;<a href = "../index.html">[Home]</a>
+        </p2>
+    </div>
+    <div class="proj_body" id = "proj_body_mobile">
+        <div class="sidebar"></div>
+        <div class="content" id = "proj_content">
+            <div class = "bodyImage">
+                <img src="../images/random/rng_close.jpg">
+            </div>
+            <div class = "bodyImage">
+                <img src="../images/random/rng.jpg">
+            </div>     
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/703570032?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Blink!"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        <div class="text" id = "text_module">
+            <i>43% Random</i><br>
+            2022<br>
+            Number toy, DC motor, camera, microcontroller, plastic<br>
+            6 x 10 x 7.5 cm<br>
+            <br>
+            
+I found this toy in a second hand shop. It has a clear plastic shell with small tiles numbered 1-50 on the inside. There is a small "selector column" on the left which can be used to separate a few of the tiles from the rest. Who knows its original purpose, but to me it seems a sort of lottery number picker.<br><br>
+
+I was curious, how random are these numbers really? I built a small testing rig, a DC motor with a hall sensor attached to detect each full rotation. On each spin, a photograph was taken. Using computer vision techniques, the tiles were individually extracted from the selector column of each image. They were then identified using a neural network. In total, 42 kilobits of data was collected.<br><br>
+
+The bitstream was run through the NIST's Statistical Test Suite for Random and Pseudorandom Number Generators. In the end, it was found to be random in 7 of the tests and non-random in 9.<br><br>
+
+What a shame. I really wanted it to be more random. 
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/main.js"></script>
+</body>
+
+</html>

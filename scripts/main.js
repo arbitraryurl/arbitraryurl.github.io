@@ -1,178 +1,215 @@
-//on index page
-if (window.location.pathname === '/' || document.URL.includes("index.html")){
-	console.log("INDEX")
-	const myButtons = document.querySelectorAll("#here");
-	for (const btn of myButtons) {
-			btn.addEventListener('click', function() {
-				this.classList.toggle("activeIdx");
-				const to_open = btn.getAttribute("data-for");
-				document.querySelector("#" + to_open).classList.toggle('open');
-			})
-		};
+function change(){
+    console.log(window.innerWidth);
+    var w = window.innerWidth;
+    if (w>=1500){
+        if (document.getElementById('test') !=null){
+            document.getElementById("test").style.gridTemplateColumns = "9vw 9vw 9vw 9vw";
+            document.getElementById("test").style.gridTemplateRows = "9vw 9vw 9vw 9vw"
+            document.getElementById("test").style.gap = "3vw 4vw"
+            document.getElementById("test").style.paddingTop = "8vh";
+        }
+
+        if (document.getElementById('proj_body_mobile') !=null){
+            document.getElementById("proj_body_mobile").style.gridTemplateColumns = "12.5vw 50vw 37.5vw";
+        }
+
+        if (document.getElementById('text_module') !=null){
+            document.getElementById("text_module").style.paddingLeft = "0px";
+            document.getElementById("text_module").style.paddingBottom = "0vh";
+        }
+
+        if (document.getElementById('proj_content') !=null){
+            document.getElementById("proj_content").style.overflowY = "scroll";
+        }
+
+        if (document.getElementById('grid') !=null){
+            document.getElementById("grid").style.height = "calc(100vh + 100px)";
+        }
+    }
+    if (w >= 800 && w <1200){
+        if (document.getElementById('test') !=null){
+            document.getElementById("test").style.gridTemplateColumns = "13.33vw 13.33vw 13.33vw";
+            document.getElementById("test").style.gridTemplateRows = "13.33vw 13.33vw 13.33vw";
+            document.getElementById("test").style.gap = "4vw 5vw"
+            document.getElementById("test").style.paddingTop = "8vh";
+        }
+
+        if (document.getElementById('proj_body_mobile') !=null){
+            document.getElementById("proj_body_mobile").style.gridTemplateColumns = "12.5vw 50vw 37.5vw";
+        }
+
+        if (document.getElementById('text_module') !=null){
+            document.getElementById("text_module").style.paddingLeft = "0px";
+            document.getElementById("text_module").style.paddingBottom = "0vh";
+        }
+
+        if (document.getElementById('proj_content') !=null){
+            document.getElementById("proj_content").style.overflowY = "scroll";
+        }
+
+        if (document.getElementById('grid') !=null){
+            document.getElementById("grid").style.height = "calc(100vh - 50px)";
+        }
+
+    }
+    if (w < 800){
+        if (document.getElementById('test') !=null){
+            document.getElementById("test").style.gridTemplateColumns = "33vw 33vw";
+            document.getElementById("test").style.gridTemplateRows = "33vw 33vw 33vw 33vw 33vw";
+            document.getElementById("test").style.gap = "10vw";
+            document.getElementById("test").style.paddingTop = "5vh";
+        }
+
+        if (document.getElementById('proj_body_mobile') !=null){
+            document.getElementById("proj_body_mobile").style.gridTemplateColumns = "100vw";
+        }
+
+        if (document.getElementById('text_module') !=null){
+            document.getElementById("text_module").style.paddingLeft = "20px";
+            document.getElementById("text_module").style.paddingBottom = "5vh";
+        }
+
+        if (document.getElementById('proj_content') !=null){
+            document.getElementById("proj_content").style.overflowY = "visible";
+        }
+
+        if (document.getElementById('grid') !=null){
+            document.getElementById("grid").style.height = "calc(100vh - 50px)";
+        }
+    }
 }
 
-//On main page
+window.addEventListener('resize', change);
+document.addEventListener("DOMContentLoaded", change);
+
+const extracted_links = ["pages/grassland.html", "pages/teeth.html","pages/pollen.html",
+    "pages/decay.html", "pages/blink.html","pages/rng.html","pages/stop.html",
+    "pages/amp.html","pages/reason.html"];
+
+const title_list = ["Remanence of a Grassland",
+    "I Often Dream Of My Teeth Falling Out",
+    "Electrostatic Pollen",
+    "DECAY",
+    "Blink! (It's Irresistible)",
+    "43% Random",
+    "I Can't Stop",
+    "L94 Headphone Amp",
+    "S. Podophyllum"];
+
+
+//get links from the images
+// const extracted_links = document.getElementById('test').getElementsByTagName('a');
+
+//create new p1 elements for the header
+const para = document.createElement("p1");
+
+//get all of the 
+const from_body = document.getElementsByClassName("image-item");
+
+document.getElementById('head').prepend(para);
+para.appendChild(document.createTextNode('['));
+
+if (typeof on_index === 'undefined') {
+    console.log("sub");}
 else{
-	console.log("MAIN")
-	// var datas = ["1", "2", "3"];
-	// sessionStorage["datas"] = JSON.stringify(datas);
-	//
-	// // Retrieve
-	// var stored_datas = JSON.parse(sessionStorage["datas"]);
-	// console.log(stored_datas);
-	const myButtons = document.querySelectorAll("#here_instant");
-	for (const btn of myButtons) {
-			btn.addEventListener('click', function() {
-				this.classList.toggle("activeIdx");
-				const to_open = btn.getAttribute("data-for");
-				document.querySelector("#" + to_open).classList.toggle('open');
-			});
-		};
+    console.log(on_index);}
+
+for (let i =0; i<title_list.length; i++){
+    //extract the first letter from each image caption
+    //const hyper = from_body[i].textContent.split(/\r?\n/)[3];
+    // const nulls = hyper.search(/\S|$/);
+    // const lowerC = hyper[nulls].toLowerCase();
+
+    const lowerC = title_list[i][0].toLowerCase();
+
+
+    //create an anchor
+    const a = document.createElement('a');
+    //add text to anchor
+    const linkText = document.createTextNode(lowerC);
+    a.appendChild(linkText);
+    //extract page from path, then add link of image to anchor
+    const ex = String(extracted_links[i]);
+    console.log(extracted_links[i]);
+
+    //if we aren't on the index page, we need to correct the path 
+    //by moving 1 directory up
+    if (typeof on_index === 'undefined') {
+        a.href = "../" + ex;}
+    else{
+        a.href = ex;}
+    
+
+    //add anchor to p1
+    para.appendChild(a);
+
+    if (i < title_list.length-1){
+        para.appendChild(document.createTextNode(' / '));
+    }
+
+    if (i==title_list.length-1){
+        para.appendChild(document.createTextNode(']'));
+    }
+
+    
+}
+
+const links = document.getElementById("head").getElementsByTagName('a');
+
+
+for (let i = 0; i< links.length; i++){
+    const location = links[i].getAttribute("href");
+    
+    //console.log(location);
+    
+    const pButton = document.querySelectorAll('[href*="' + String(location) +'"]');
+    //console.log(String(location));
+
+    // const pButton = document.querySelectorAll('[href*="blink.html"]');
+
+    if (pButton.length > 0){
+        for (let i = 0; i < pButton.length; i++) {
+
+            pButton[i].addEventListener('mouseover', () => {
+                for (let i =0; i<pButton.length; i++){
+                    pButton[i].style.backgroundColor = '#ee0b0b';
+                    pButton[i].style.color = '#ffffff';
+                }
+                console.log('yo');
+            });
+
+            pButton[i].addEventListener('mouseout', () => {
+                for (let i =0; i<pButton.length; i++){
+                    pButton[i].style.backgroundColor = '#ffffff';
+                    pButton[i].style.color = '#000000';
+                }
+                console.log('yo2');
+            });
+
+        }
+    }
 }
 
 
+// const pButton = document.querySelectorAll('[href*="blink.html"]');
 
+// for (let i = 0; i < pButton.length; i++) {
 
-//store slide number to present on new page
-function store(p) {
-	sessionStorage.setItem("imnum", p);
-	console.log(p);
-}
+//     pButton[i].addEventListener('mouseover', () => {
+//         pButton[0].style.backgroundColor = '#ff0000';
+//         pButton[0].style.color = '#ffffff';
+//         pButton[1].style.backgroundColor = '#ff0000';
+//         pButton[1].style.color = '#ffffff';
 
-//store div id to open on new page
-function txt_store(t) {
-	sessionStorage.setItem("nextopen", t);
-	console.log(t)
-}
+//         console.log('yo');
+//     });
 
-var div_flag = sessionStorage.getItem("flag");
-console.log(div_flag);
+//     pButton[i].addEventListener('mouseout', () => {
+//         pButton[0].style.backgroundColor = '#ffffff';
+//         pButton[0].style.color = '#000000';
+//         pButton[1].style.backgroundColor = '#ffffff';
+//         pButton[1].style.color = '#000000';
+//         console.log('yo2');
+//     });
 
-// Retrieve
-
-console.log(stored_datas);
-
-//if we have stored divs and we're not on the index page
-if (div_flag != null && !(window.location.pathname === '/' || document.URL.includes("index.html")) ){
-	var stored_datas = JSON.parse(sessionStorage["arr"]);
-	var arr = stored_datas;
-}
-else if (div_flag == null && !(window.location.pathname === '/' || document.URL.includes("index.html"))){
-	var arr = ["instant1"];
-}
-else{
-	var arr = [];
-}
-
-console.log(arr);
-
-//append div to be opened to array
-function carryOn(d){
-	if (!arr.includes(d)){
-		arr.push(d);
-	}
-
-	else if (arr.includes(d)){
-		const arr_ind = arr.indexOf(d);
-		console.log(arr_ind);
-		arr.splice(arr_ind, 1);
-	}
-	sessionStorage.setItem("flag", 1);
-	console.log(arr);
-}
-
-//save array to local memory
-function setSwitch(){
-	sessionStorage["arr"] = JSON.stringify(arr);
-}
-
-
-
-
-//fetching local memory
-var thatopen = sessionStorage.getItem("nextopen");
-var slideIndex = parseInt(sessionStorage.getItem("imnum"));
-
-if (slideIndex){
-	showArrow(slideIndex);
-
-}
-
-// //if a slide number is stored, show it; else set slide to 0
-// if (slideIndex){
-// 	showSlides(slideIndex);
-// } else {
-// 	slideIndex = 1;
-// 	thatopen = "instant1"
-// 	showSlides(slideIndex);
-// }
-
-
-
-//open div on new page (instant) using local memory
-const myButtons = document.querySelectorAll("#here_instant");
-console.log("HERE");
-console.log(myButtons);
-var arrayLength = arr.length;
-for (const btn of myButtons) {
-	for (var i = 0; i<arrayLength; i++){
-		divToOpen = arr[i];
-		console.log(divToOpen);
-		if (btn.getAttribute("data-for") == divToOpen){
-			btn.classList.toggle("activeIdx");
-			document.querySelector('#' + divToOpen).classList.toggle('open');
-		}
-	}
-}
-
-if (thatopen == "about"){
-	document.querySelector("#about").classList.toggle("activeIdx");
-}
-
-// if (thatopen == "contact"){
-// 	document.querySelector("#contact").classList.toggle("activeIdx");
-// }
-
-function showArrow(n){
-	var dots = document.getElementsByClassName("btn");
-	for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(" active", "");
-	}
-	dots[slideIndex-1].className += " active";
-}
-
-// // Next/previous controls
-// function plusSlides(n) {
-//   slideIndex = slideIndex - n;
-//   showSlides(slideIndex);
-// }
-//
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-//
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   var dots = document.getElementsByClassName("btn");
-//   var caps = document.getElementsByClassName("caption_inc");
-//   // console.log(slideIndex);
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//       dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   for (i = 0; i < caps.length; i++) {
-//       caps[i].className = caps[i].className.replace(" active_cap", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-// 	if (slideIndex < caps.length){
-//   caps[slideIndex-1].className += " active_cap";
-// 	}
-//
 // }
