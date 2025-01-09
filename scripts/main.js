@@ -66,7 +66,7 @@ function change(){
 
         if (document.getElementById('text_module') !=null){
             document.getElementById("text_module").style.paddingLeft = "20px";
-            document.getElementById("text_module").style.paddingBottom = "5vh";
+            document.getElementById("text_module").style.paddingBottom = "7.5vh";
         }
 
         if (document.getElementById('proj_content') !=null){
