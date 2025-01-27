@@ -83,14 +83,13 @@ window.addEventListener('resize', change);
 document.addEventListener("DOMContentLoaded", change);
 
 const extracted_links = ["pages/grassland.html", "pages/teeth.html","pages/pollen.html",
-    "pages/decay.html", "pages/blink.html","pages/rng.html","pages/stop.html",
+    "pages/decay.html","pages/rng.html","pages/stop.html",
     "pages/amp.html","pages/reason.html"];
 
 const title_list = ["Remanence of a Grassland",
     "I Often Dream Of My Teeth Falling Out",
     "Electrostatic Pollen",
     "DECAY",
-    "Blink! (It's Irresistible)",
     "43% Random",
     "I Can't Stop",
     "L94 Headphone Amp",
