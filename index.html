@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="Daniel Vadasz — new media and analog circuit artist. Selected works 2020–2024.">
+    <title>Daniel Vadasz</title>
+</head>
+<body>
+    <div class="header" id = "head">
+        <p2>
+            <a href = "pages/about.html">[About]</a>&nbsp;&nbsp;<a href = "index.html">[Home]</a>
+        </p2>
+    </div>
+    <div class = "grid-container" id = "grid">
+        <div class="image-grid" id="test">
+            <a href = "pages/grassland.html"><div class="image-item">
+                <img src="thumbnails/grassland.jpg" alt="Remanence of a Grassland">
+                <p1><b>2024</b></p1>
+                <p2>Remanence of a Grassland</p2>
+            </div></a>
+            <a href = "pages/teeth.html"><div class="image-item">
+                <img src="thumbnails/teeth.jpg" alt="I Often Dream Of My Teeth Falling Out">
+                <p1><b>2024</b></p1>
+                <p2>I Often Dream Of My Teeth Falling Out</p2>
+            </div></a>
+            <a href = "pages/pollen.html"><div class="image-item">
+                <img src="thumbnails/pollen.jpg" alt="Electrostatic Pollen">
+                <p1><b>2023</b></p1>
+                <p2>Electrostatic Pollen</p2>
+            </div></a>
+            <a href = "pages/decay.html"><div class="image-item">
+                <img src="thumbnails/decay.jpg" alt="DECAY">
+                <p1><b>2023</b></p1>
+                <p2>DECAY</p2>
+            </div></a>
+            <a href = "pages/rng.html"><div class="image-item">
+                <img src="thumbnails/rng.jpg" alt="43% Random">
+                <p1><b>2022</b></p1>
+                <p2>43% Random</p2>
+            </div></a>
+            <a href = "pages/stop.html"><div class="image-item">
+                <img src="thumbnails/stop.jpg" alt="I Can't Stop">
+                <p1><b>2022</b></p1>
+                <p2>I Can't Stop</p2>
+            </div></a>
+            <a href = "pages/amp.html"><div class="image-item">
+                <img src="thumbnails/amp.jpg" alt="L94 Headphone Amp">
+                <p1><b>2021</b></p1>
+                <p2>L94 Headphone Amp</p2>
+            </div></a>
+
+            <a href = "pages/reason.html"><div class="image-item">
+                <img src="thumbnails/reason.jpg" alt="S. Podophyllum">
+                <p1><b>2020</b></p1>
+                <p2>S. Podophyllum</p2>
+            </div></a>
+            <!-- Add more image items here -->
+        </div>
+    </div>
+
+    <div class="sim-control" id="sim-control">
+        <label class="sim-line">
+            Waves On
+            <input type="checkbox" id="waves-toggle">
+            <span class="sim-box" aria-hidden="true"></span>
+        </label>
+        <div class="wave-states" id="wave-states">
+            [ <a href="#" data-w="calm">calm</a> / <a href="#" data-w="swell" class="active">swell</a> / <a href="#" data-w="storm">storm</a> ]
+        </div>
+    </div>
+
+<script type="text/javascript">
+    on_index = true;
+</script>
+<script src="scripts/main.js"></script>
+<script src="scripts/ocean.js"></script>
+
+</body>
+</html>
