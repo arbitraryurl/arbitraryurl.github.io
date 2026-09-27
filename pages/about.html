@@ -15,18 +15,56 @@
             <a href = "about.html">[About]</a>&nbsp;&nbsp;<a href = "../index.html">[Home]</a>
         </p2>
     </div>
-    <div class="proj_body" id = "proj_body_mobile">
-        <div class="sidebar"></div>
-        <div class="text" id = "text_module">
-            name = <b>Daniel Vadasz</b><br>
-            location = HfK Bremen, Bremen, Germany<br>
-            background = B.Sc. Electrical Engineering, Rice University, 2019<br>  
-            interests = new media, analog ciruits<br>
-            contact = <a href = "mailto:telematic.daniel@gmail.com">telematic.daniel@gmail.com</a>
+    <div class="about">
+        <div class="ds">
+            <div class="ds-top">
+                <b>DANIEL VADASZ</b>
+                <div class="ds-doc"><b>DV-26</b><br>DVS001 – REVISED SEPTEMBER 2026</div>
+            </div>
+
+            <div class="ds-pins">
+                <svg viewBox="0 0 240 150" role="img" aria-label="DIP-8 pinout of the DV-26">
+                    <path class="ds-body" d="M85.5,15.5 H113 A7,7 0 0 0 127,15.5 H154.5 V134.5 H85.5 Z"/>
+                    <g class="pin" data-pin="1"><line x1="70" y1="35.5" x2="85" y2="35.5"/><text class="num" x="91" y="38.5">1</text><text x="66" y="39" text-anchor="end">NAME</text></g>
+                    <g class="pin" data-pin="2"><line x1="70" y1="60.5" x2="85" y2="60.5"/><text class="num" x="91" y="63.5">2</text><text x="66" y="64" text-anchor="end">IN−</text></g>
+                    <g class="pin" data-pin="3"><line x1="70" y1="85.5" x2="85" y2="85.5"/><text class="num" x="91" y="88.5">3</text><text x="66" y="89" text-anchor="end">IN+</text></g>
+                    <g class="pin" data-pin="4"><line x1="70" y1="110.5" x2="85" y2="110.5"/><text class="num" x="91" y="113.5">4</text><text x="66" y="114" text-anchor="end">GND</text></g>
+                    <g class="pin" data-pin="8"><line x1="155" y1="35.5" x2="170" y2="35.5"/><text class="num" x="149" y="38.5" text-anchor="end">8</text><text x="174" y="39">I/O</text></g>
+                    <g class="pin" data-pin="7"><line x1="155" y1="60.5" x2="170" y2="60.5"/><text class="num" x="149" y="63.5" text-anchor="end">7</text><text x="174" y="64">NC</text></g>
+                    <g class="pin" data-pin="6"><line x1="155" y1="85.5" x2="170" y2="85.5"/><text class="num" x="149" y="88.5" text-anchor="end">6</text><text x="174" y="89">OUT</text></g>
+                    <g class="pin" data-pin="5"><line x1="155" y1="110.5" x2="170" y2="110.5"/><text class="num" x="149" y="113.5" text-anchor="end">5</text><text x="174" y="114">EDU</text></g>
+                    <text class="caption" x="120" y="149" text-anchor="middle">DIP-8 (top view)</text>
+                </svg>
+
+                <table class="pins">
+                    <tr><th>PIN</th><th>NAME</th><th>DESCRIPTION</th></tr>
+                    <tr data-pin="1"><td>1</td><td>NAME</td><td><b>Daniel Vadasz</b></td></tr>
+                    <tr data-pin="2"><td>2</td><td>IN−</td><td>Interest: analog circuits</td></tr>
+                    <tr data-pin="3"><td>3</td><td>IN+</td><td>Interest: new media</td></tr>
+                    <tr data-pin="4"><td>4</td><td>GND</td><td>Grounded at HfK Bremen, Bremen, Germany</td></tr>
+                    <tr data-pin="5"><td>5</td><td>EDU</td><td>B.Sc. Electrical Engineering, Rice University, 2019</td></tr>
+                    <tr data-pin="6"><td>6</td><td>OUT</td><td>Selected works, 2020–2024: see <a href = "../index.html">[Home]</a></td></tr>
+                    <tr data-pin="7"><td>7</td><td>NC</td><td>No internal connection</td></tr>
+                    <tr data-pin="8"><td>8</td><td>I/O</td><td><a href = "mailto:telematic.daniel@gmail.com">telematic.daniel@gmail.com</a></td></tr>
+                </table>
+            </div>
+
+            <div class="ds-foot">
+                <span>Submit documentation feedback: <a href = "mailto:telematic.daniel@gmail.com">telematic.daniel@gmail.com</a></span>
+                <span>Copyright © 2026, Daniel Vadasz</span>
+            </div>
         </div>
     </div>
 </div>
 
+<script type="text/javascript">
+    // Hovering a pin or its row lights up both.
+    document.querySelectorAll('[data-pin]').forEach(el => {
+        const pair = document.querySelectorAll('[data-pin="' + el.dataset.pin + '"]');
+        el.addEventListener('mouseover', () => pair.forEach(p => p.classList.add('hot')));
+        el.addEventListener('mouseout', () => pair.forEach(p => p.classList.remove('hot')));
+    });
+</script>
 <script src="../scripts/main.js"></script>
 </body>
 

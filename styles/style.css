@@ -70,6 +70,138 @@ a:visited {
 
 }
 
+/* About page: the datasheet sits in the middle of the space below the header.
+   Auto margins (rather than align/justify: center) keep it scrollable from
+   the top if it's ever taller than the screen. */
+.about {
+    display: flex;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 20px 20px 60px;
+    scrollbar-width: none;
+}
+
+.about > * {
+    margin: auto;
+}
+
+/* The About page is an IC datasheet: part-number header, DIP-8 pinout with
+   its pin table, and a documentation-feedback footer. */
+.ds {
+    width: 100%;
+    max-width: 640px;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.ds-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 4px;
+}
+
+.ds-doc {
+    text-align: right;
+    font-size: 10px;
+}
+
+.ds table {
+    border-collapse: collapse;
+    width: 100%;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.ds th {
+    text-align: left;
+    border-bottom: 1px solid #000000;
+    padding: 2px 6px;
+}
+
+.ds td {
+    padding: 2px 6px;
+    vertical-align: top;
+}
+
+.ds-pins {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    column-gap: 24px;
+    align-items: start;
+    margin-top: 24px;
+}
+
+.ds-pins svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.pin line, .ds-body {
+    stroke: #000000;
+    stroke-width: 1;
+    fill: none;
+    shape-rendering: crispEdges;
+}
+
+.ds svg text {
+    fill: #000000;
+    font-size: 11px;
+}
+
+.ds svg .num, .ds svg .caption {
+    font-size: 9px;
+}
+
+/* Pins and their rows light up together, like the tiles and letters on
+   the home page. !important beats main.js's inline hover colours on the
+   [Home] link inside the OUT row. */
+.pin.hot line {
+    stroke: #ee0b0b;
+    stroke-width: 3;
+}
+
+.ds svg .pin.hot text {
+    fill: #ee0b0b;
+}
+
+.pins tr[data-pin] {
+    cursor: default;
+}
+
+.pins tr.hot, .pins tr.hot a {
+    background-color: #ee0b0b !important;
+    color: #ffffff !important;
+}
+
+.ds-foot {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #000000;
+    margin-top: 22px;
+    padding-top: 4px;
+    font-size: 10px;
+}
+
+@media (max-width: 700px) {
+    .ds-pins {
+        grid-template-columns: 1fr;
+    }
+
+    .ds-pins svg {
+        max-width: 240px;
+        margin: 0 auto 12px;
+        display: block;
+    }
+
+    .ds-foot {
+        flex-direction: column;
+        gap: 2px;
+    }
+}
+
   
 /* .sidebar {
     border-right: 1px solid lightgrey;
@@ -260,6 +392,12 @@ h2 {
     color: #ee0b0b;
 }
 
+/* The checkbox itself is invisible, so show keyboard focus on the [ ]. */
+.sim-control input:focus-visible ~ .sim-box::after {
+    outline: 1px dotted #ee0b0b;
+    outline-offset: 2px;
+}
+
 /* Wave-state picker — shown only while Waves is on. */
 .wave-states {
     margin-top: 6px;
@@ -281,4 +419,24 @@ h2 {
 
 .wave-states a.active {
     color: #ee0b0b;
+}
+
+/* On touch the 12px text is far smaller than a fingertip. Pad the hit areas
+   out (negative margins keep the text where it was) and open up the gap
+   between the two lines so their pads meet instead of overlapping. */
+@media (pointer: coarse) {
+    .sim-line {
+        padding: 14px 14px 10px 24px;
+        margin: -14px -14px -10px -24px;
+    }
+
+    .wave-states {
+        margin-top: 20px;
+    }
+
+    .wave-states a {
+        display: inline-block;
+        padding: 10px 6px 12px;
+        margin: -10px -6px -12px;
+    }
 }

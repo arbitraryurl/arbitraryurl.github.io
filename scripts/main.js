@@ -1,7 +1,9 @@
+// The width tiers below must stay exhaustive and set the same properties in
+// each branch: these are inline styles, so a width matching no branch keeps
+// whatever the last resize applied.
 function change(){
-    console.log(window.innerWidth);
     var w = window.innerWidth;
-    if (w>=1500){
+    if (w>=1200){
         if (document.getElementById('test') !=null){
             document.getElementById("test").style.gridTemplateColumns = "9vw 9vw 9vw 9vw";
             document.getElementById("test").style.gridTemplateRows = "9vw 9vw 9vw 9vw"
@@ -108,11 +110,6 @@ const from_body = document.getElementsByClassName("image-item");
 document.getElementById('head').prepend(para);
 para.appendChild(document.createTextNode('['));
 
-if (typeof on_index === 'undefined') {
-    console.log("sub");}
-else{
-    console.log(on_index);}
-
 for (let i =0; i<title_list.length; i++){
     //extract the first letter from each image caption
     //const hyper = from_body[i].textContent.split(/\r?\n/)[3];
@@ -129,7 +126,6 @@ for (let i =0; i<title_list.length; i++){
     a.appendChild(linkText);
     //extract page from path, then add link of image to anchor
     const ex = String(extracted_links[i]);
-    console.log(extracted_links[i]);
 
     //if we aren't on the index page, we need to correct the path 
     //by moving 1 directory up
@@ -174,7 +170,6 @@ for (let i = 0; i< links.length; i++){
                     pButton[i].style.backgroundColor = '#ee0b0b';
                     pButton[i].style.color = '#ffffff';
                 }
-                console.log('yo');
             });
 
             pButton[i].addEventListener('mouseout', () => {
@@ -182,7 +177,6 @@ for (let i = 0; i< links.length; i++){
                     pButton[i].style.backgroundColor = '#ffffff';
                     pButton[i].style.color = '#000000';
                 }
-                console.log('yo2');
             });
 
         }
@@ -200,6 +194,10 @@ if (proj_content || proj_body) {
     const canScroll = (el) => el && el.scrollHeight > el.clientHeight + 1;
 
     window.addEventListener('wheel', (e) => {
+        // Ctrl+wheel and trackpad pinch arrive as wheel events with ctrlKey
+        // set; leave those to the browser so page zoom keeps working.
+        if (e.ctrlKey) return;
+
         // Over the caption, prefer scrolling the block so long text stays
         // readable; everywhere else drive the image column.
         const overText = e.target.closest && e.target.closest('#text_module');
