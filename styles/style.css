@@ -155,9 +155,7 @@ a:visited {
     font-size: 9px;
 }
 
-/* Pins and their rows light up together, like the tiles and letters on
-   the home page. !important beats main.js's inline hover colours on the
-   [Home] link inside the OUT row. */
+/* Pins and their rows light up together, in the site's hover red. */
 .pin.hot line {
     stroke: #ee0b0b;
     stroke-width: 3;
@@ -172,8 +170,8 @@ a:visited {
 }
 
 .pins tr.hot, .pins tr.hot a {
-    background-color: #ee0b0b !important;
-    color: #ffffff !important;
+    background-color: #ee0b0b;
+    color: #ffffff;
 }
 
 .ds-foot {
@@ -256,6 +254,19 @@ h2 {
     font-size: 12px;
     text-align: right;
 
+}
+
+/* Hover: every link and tile lights up on its own, in the site's red, and
+   [random] also lights the tile it's currently pointing at (.lit, from
+   main.js). Only on devices that really hover, so nothing stays red after a
+   tap on a phone. */
+@media (hover: hover) {
+    .header a:hover,
+    .image-grid a:hover,
+    .image-grid a.lit {
+        background-color: #ee0b0b;
+        color: #ffffff;
+    }
 }
 
 

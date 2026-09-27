@@ -269,8 +269,8 @@
 
     // Take the tiles out of the grid for a run. `carry` holds offsets from a
     // previous placement, so a re-measure picks up exactly where it left off.
-    // Styles are set one property at a time, leaving main.js's hover colours
-    // on the anchors alone.
+    // Styles are set one property at a time, leaving anything else inline on
+    // the anchors alone.
     function place(els, carry) {
         // Detaching only works when every tile is already on screen.
         const fits = els.every(el => visualBox(el).bottom <= window.innerHeight);

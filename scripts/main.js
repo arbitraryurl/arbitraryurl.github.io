@@ -101,87 +101,64 @@ const title_list = ["Remanence of a Grassland",
 //get links from the images
 // const extracted_links = document.getElementById('test').getElementsByTagName('a');
 
-//create new p1 elements for the header
+//create new p1 element for the header: a 90s webring bar. The works form the
+//ring — prev/next step to the neighbouring work and wrap around at the ends,
+//random jumps to any other work
 const para = document.createElement("p1");
-
-//get all of the 
-const from_body = document.getElementsByClassName("image-item");
-
 document.getElementById('head').prepend(para);
-para.appendChild(document.createTextNode('['));
 
-for (let i =0; i<title_list.length; i++){
-    //extract the first letter from each image caption
-    //const hyper = from_body[i].textContent.split(/\r?\n/)[3];
-    // const nulls = hyper.search(/\S|$/);
-    // const lowerC = hyper[nulls].toLowerCase();
+//if we aren't on the index page, we need to correct the paths
+//by moving 1 directory up
+const up = (typeof on_index === 'undefined') ? "../" : "";
 
-    const lowerC = title_list[i][0].toLowerCase();
+//this page's place in the ring; the index and about pages sit outside it
+//(-1), so from there next is the newest work and prev the oldest
+const page_name = (p) => p.split('/').pop().replace(/\.html$/, '');
+const here = extracted_links.findIndex(l => page_name(l) === page_name(window.location.pathname));
+const n = extracted_links.length;
+const prev = here < 0 ? n - 1 : (here - 1 + n) % n;
+const next = here < 0 ? 0 : (here + 1) % n;
+let pick = Math.floor(Math.random() * (here < 0 ? n : n - 1));
+if (here >= 0 && pick >= here) pick++;   //any work but this one
 
+const ring = [["[<< prev]", prev, title_list[prev]],
+              ["[random]", pick, ""],        //no tooltip: keep it a surprise
+              ["[next >>]", next, title_list[next]]];
 
-    //create an anchor
+const ring_links = ring.map(([label, i, tip], k) => {
+    //spaced like [About]&nbsp;&nbsp;[Home], and kept on one line
+    if (k > 0) para.appendChild(document.createTextNode('\u00a0\u00a0'));
     const a = document.createElement('a');
-    //add text to anchor
-    const linkText = document.createTextNode(lowerC);
-    a.appendChild(linkText);
-    //extract page from path, then add link of image to anchor
-    const ex = String(extracted_links[i]);
-
-    //if we aren't on the index page, we need to correct the path 
-    //by moving 1 directory up
-    if (typeof on_index === 'undefined') {
-        a.href = "../" + ex;}
-    else{
-        a.href = ex;}
-    
-
-    //add anchor to p1
+    a.appendChild(document.createTextNode(label));
+    a.href = up + extracted_links[i];
+    if (tip) a.title = tip;
     para.appendChild(a);
+    return a;
+});
 
-    if (i < title_list.length-1){
-        para.appendChild(document.createTextNode(' / '));
-    }
+//[random] draws again every time the pointer moves onto it, never landing on
+//this page or where it just was, so each hover shows a new destination; on
+//the index, the tile it lands on lights up (hover colours are in style.css)
+const random_link = ring_links[1];
+let lit_tile = null;
 
-    if (i==title_list.length-1){
-        para.appendChild(document.createTextNode(']'));
-    }
-
-    
+function light_random(on){
+    if (lit_tile) lit_tile.classList.remove('lit');
+    lit_tile = on ? document.querySelector('#test > a[href="' + extracted_links[pick] + '"]') : null;
+    if (lit_tile) lit_tile.classList.add('lit');
 }
 
-const links = document.getElementById("head").getElementsByTagName('a');
+random_link.addEventListener('mouseenter', () => {
+    let i;
+    do { i = Math.floor(Math.random() * n); } while (i === here || i === pick);
+    pick = i;
+    random_link.href = up + extracted_links[pick];
+    light_random(true);
+});
+random_link.addEventListener('mouseleave', () => light_random(false));
 
-
-for (let i = 0; i< links.length; i++){
-    const location = links[i].getAttribute("href");
-    
-    //console.log(location);
-    
-    const pButton = document.querySelectorAll('[href*="' + String(location) +'"]');
-    //console.log(String(location));
-
-    // const pButton = document.querySelectorAll('[href*="blink.html"]');
-
-    if (pButton.length > 0){
-        for (let i = 0; i < pButton.length; i++) {
-
-            pButton[i].addEventListener('mouseover', () => {
-                for (let i =0; i<pButton.length; i++){
-                    pButton[i].style.backgroundColor = '#ee0b0b';
-                    pButton[i].style.color = '#ffffff';
-                }
-            });
-
-            pButton[i].addEventListener('mouseout', () => {
-                for (let i =0; i<pButton.length; i++){
-                    pButton[i].style.backgroundColor = '#ffffff';
-                    pButton[i].style.color = '#000000';
-                }
-            });
-
-        }
-    }
-}
+//coming back to the page after following [random] never fires mouseleave
+window.addEventListener('pageshow', () => light_random(false));
 
 
 // On the project subpages the content scrolls inside a nested element, so the
