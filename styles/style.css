@@ -369,6 +369,19 @@ h2 {
     -webkit-user-select: none;
 }
 
+/* On phones the page itself never scrolls, so the browser's bars never tuck
+   away, and some Android browsers measure `bottom` from behind their bottom
+   toolbar. Measure down from the top by the dynamic viewport height instead —
+   the space actually showing between the bars — then lift the control by its
+   own height, so it still grows upward when the wave-state row appears. */
+@supports (height: 100dvh) {
+    .sim-control {
+        bottom: auto;
+        top: calc(100dvh - 12px - env(safe-area-inset-bottom, 0px));
+        transform: translateY(-100%);
+    }
+}
+
 .sim-line {
     display: block;
     cursor: pointer;
