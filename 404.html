@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        // GitHub Pages serves this page for a missing path at any depth, so
+        // there every relative link below resolves from the site root. Opened
+        // straight from disk, this file already sits beside the site's files.
+        if (location.protocol !== 'file:') {
+            const base = document.createElement('base');
+            base.href = '/';
+            document.head.appendChild(base);
+        }
+    </script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Not Found — Daniel Vadasz</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="header" id ="head">
+        <p2>
+            <a href = "pages/about.html">[About]</a>&nbsp;&nbsp;<a href = "index.html">[Home]</a>
+        </p2>
+    </div>
+    <div class="about">
+        <div class="notfound">404 — no internal connection</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // links resolve from the site's top folder (see the <head>), just as on the index
+    on_index = true;
+</script>
+<script src="scripts/main.js"></script>
+</body>
+
+</html>

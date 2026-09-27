@@ -70,7 +70,7 @@ a:visited {
 
 }
 
-/* About page: the datasheet sits in the middle of the space below the header.
+/* About and 404 pages: the content sits in the middle of the space below the header.
    Auto margins (rather than align/justify: center) keep it scrollable from
    the top if it's ever taller than the screen. */
 .about {
@@ -83,6 +83,11 @@ a:visited {
 
 .about > * {
     margin: auto;
+}
+
+.notfound {
+    font-size: 11px;
+    line-height: 1.5;
 }
 
 /* The About page is an IC datasheet: part-number header, DIP-8 pinout with
@@ -462,5 +467,13 @@ h2 {
         display: inline-block;
         padding: 10px 6px 12px;
         margin: -10px -6px -12px;
+    }
+
+    /* Header links: the vertical padding fills the header's own 10px padding
+       (it doesn't change the line height), so each link is as tall as the
+       header; the side padding is cancelled by the margins. */
+    .header a {
+        padding: 10px 4px;
+        margin: 0 -4px;
     }
 }
